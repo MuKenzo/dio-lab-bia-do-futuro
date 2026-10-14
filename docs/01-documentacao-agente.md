@@ -5,39 +5,39 @@
 ### Problema
 > Qual problema financeiro seu agente resolve?
 
-[Sua descrição aqui]
+Muitas pessoas têm dificuldade em controlar seus gastos, organizar suas finanças e entender como investir de forma segura. Isso frequentemente resulta em dívidas, falta de planejamento financeiro e perda de oportunidades de crescimento patrimonial.
 
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
 
-[Sua descrição aqui]
+O agente monitora hábitos financeiros, fornece orientações personalizadas, envia lembretes de pagamentos, sugere estratégias de economia, ajuda na criação de orçamentos e ensina conceitos de investimentos de forma simples e acessível, incentivando melhores decisões financeiras no dia a dia.
 
 ### Público-Alvo
 > Quem vai usar esse agente?
 
-[Sua descrição aqui]
+Pessoas que desejam melhorar sua educação financeira, organizar suas finanças pessoais, sair das dívidas, começar a investir ou alcançar objetivos financeiros de curto, médio e longo prazo.
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+SmartMoney
 
 ### Personalidade
 > Como o agente se comporta? (ex: consultivo, direto, educativo)
 
-[Sua descrição aqui]
+O agente possui um comportamento educativo, consultivo e proativo. Ele orienta os usuários sobre finanças pessoais, investimentos e controle de gastos de forma simples e acessível, incentivando a adoção de hábitos financeiros saudáveis e a tomada de decisões mais conscientes.
 
 ### Tom de Comunicação
 > Formal, informal, técnico, acessível?
 
-[Sua descrição aqui]
+O agente possui uma comunicação acessível e amigável, com tom semi-formal e educativo. Seu objetivo é tornar temas financeiros e investimentos compreensíveis para pessoas de diferentes níveis de conhecimento, utilizando exemplos práticos e linguagem clara.
 
 ### Exemplos de Linguagem
-- Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
-- Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
-- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
+- Saudação: [ex: "Olá, eu sou o SmartMoney! Como posso ajudar você a cuidar melhor do seu dinheiro hoje?"]
+- Confirmação: [ex: "Entendi! Vou analisar sua situação e sugerir a melhor alternativa."]
+- Erro/Limitação: [ex: "Não tenho informações suficientes para responder com precisão. Poderia fornecer mais detalhes?"]
 
 ---
 
@@ -47,22 +47,31 @@
 
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
-    B --> C[LLM]
-    C --> D[Base de Conhecimento]
-    D --> C
-    C --> E[Validação]
-    E --> F[Resposta]
+    A[Usuário] -->|Mensagem| B[Interface do Assistente]
+    B --> C[LLM / IA Financeira]
+    C --> D[Análise da Solicitação]
+    D --> E[Base de Conhecimento Financeiro]
+    D --> F[Perfil Financeiro do Usuário]
+    E --> G[Geração de Recomendação]
+    F --> G
+    G --> H{Necessita Ação Proativa?}
+    H -->|Sim| I[Alertas e Lembretes]
+    H -->|Não| J[Resposta ao Usuário]
+    I --> J
+    J --> K[Usuário]
 ```
 
 ### Componentes
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | Chat onde o usuário interage com o agente (Web, WhatsApp, Teams ou aplicativo móvel). |
+| LLM | Modelo de IA responsável por interpretar as perguntas, analisar informações e gerar respostas personalizadas. |
+| Base de Conhecimento | Conteúdo sobre educação financeira, orçamento, investimentos, gestão de dívidas e planejamento financeiro. |
+| Perfil do Usuário | Armazena objetivos financeiros, renda, despesas, perfil de risco e histórico de interações. |
+| Motor de Regras | Aplica regras financeiras, validações e boas práticas antes de apresentar recomendações. |
+| Validação | Verifica coerência das respostas e evita orientações inadequadas ou sem dados suficientes. |
+| Sistema de Alertas | Envia lembretes de pagamentos, metas de economia e acompanhamento de objetivos financeiros.
 
 ---
 
@@ -70,12 +79,21 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- [ ] [O agente responde com base em informações fornecidas pelo usuário e em conhecimento financeiro validado.]
+- [ ] [Sempre informa quando não possui dados suficientes para uma recomendação.]
+- [ ] [Explica os conceitos financeiros de forma transparente e educativa.]
+- [ ] [Recomenda que decisões financeiras importantes sejam validadas com profissionais especializados quando necessário.]
+- [ ] [Não inventa valores, rentabilidades ou informações sobre produtos financeiros.]
+- [ ] [Identifica quando faltam informações para realizar uma análise adequada.]
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+- Não garante retorno financeiro ou lucro em investimentos.
+- Não substitui um consultor financeiro certificado.
+- Não realiza operações financeiras em nome do usuário.
+- Não recomenda investimentos sem analisar o perfil do usuário.
+- Não fornece informações privilegiadas ou previsões de mercado.
+- Não assume responsabilidade por decisões financeiras tomadas pelo usuário.
+- Não concede empréstimos ou acesso a instituições financeiras.
+- Não utiliza dados financeiros do usuário sem consentimento.
