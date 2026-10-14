@@ -75,12 +75,12 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [O agente responde com base em informações fornecidas pelo usuário e em conhecimento financeiro validado.]
-- [ ] [Sempre informa quando não possui dados suficientes para uma recomendação.]
-- [ ] [Explica os conceitos financeiros de forma transparente e educativa.]
-- [ ] [Recomenda que decisões financeiras importantes sejam validadas com profissionais especializados quando necessário.]
-- [ ] [Não inventa valores, rentabilidades ou informações sobre produtos financeiros.]
-- [ ] [Identifica quando faltam informações para realizar uma análise adequada.]
+- [ ] O agente responde com base em informações fornecidas pelo usuário e em conhecimento financeiro validado.
+- [ ] Sempre informa quando não possui dados suficientes para uma recomendação.
+- [ ] Explica os conceitos financeiros de forma transparente e educativa.
+- [ ] Recomenda que decisões financeiras importantes sejam validadas com profissionais especializados quando necessário.
+- [ ] Não inventa valores, rentabilidades ou informações sobre produtos financeiros.
+- [ ] Identifica quando faltam informações para realizar uma análise adequada.
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
