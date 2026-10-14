@@ -65,13 +65,9 @@ flowchart TD
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | Chat onde o usuário interage com o agente (Web, WhatsApp, Teams ou aplicativo móvel). |
-| LLM | Modelo de IA responsável por interpretar as perguntas, analisar informações e gerar respostas personalizadas. |
-| Base de Conhecimento | Conteúdo sobre educação financeira, orçamento, investimentos, gestão de dívidas e planejamento financeiro. |
-| Perfil do Usuário | Armazena objetivos financeiros, renda, despesas, perfil de risco e histórico de interações. |
-| Motor de Regras | Aplica regras financeiras, validações e boas práticas antes de apresentar recomendações. |
-| Validação | Verifica coerência das respostas e evita orientações inadequadas ou sem dados suficientes. |
-| Sistema de Alertas | Envia lembretes de pagamentos, metas de economia e acompanhamento de objetivos financeiros.
+| Interface | [Streamlit](https://streamlit.io/) |
+| LLM | Ollama (Local) |
+| Base de Conhecimento | JSON / CSV localizados na pasta `data` |
 
 ---
 
